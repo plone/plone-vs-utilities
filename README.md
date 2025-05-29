@@ -54,3 +54,12 @@ You have to reload the editor window or restart vs code, to load the snippets.
 If you have ideas to improve this extension, let us know! You can add an issue in this repository or even better make a pull request with your improvements.
 
 We are also very welcoming any help in improving the quality and usefulness of these snippets.
+
+## Extension integration
+
+This extension replaces 2 other extensions that were providing the same features and were used by community members:
+
+- [plone-vs-snippets](https://github.com/plone/plone-vs-snippets) by @MrTango
+- [zcmlLanguageConfiguration](https://github.com/erral/erral.erralZcmlLanguageConfiguration) by @erral
+
+Thanks them for their work!
