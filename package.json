@@ -1,0 +1,107 @@
+{
+  "name": "plone-vs-utilities",
+  "displayName": "plone-vs-utilities",
+  "description": "VSCode extension for Plone",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+	"icon": "images/plone.png",
+  "publisher": "plone",
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Snippets"
+  ],
+  "keywords": [
+		"plone",
+		"snippets",
+		"vs code"
+	],
+	"license": "GPL-3.0",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "zcml",
+        "extensions": [
+          ".zcml"
+        ],
+        "aliases": [
+          "ZCML"
+        ],
+        "configuration": "./dist/language/zcml.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "zcml",
+        "scopeName": "source.zcml",
+        "path": "./dist/grammar/zcml.json"
+      }
+    ],
+    "configuration": {
+      "title": "Plone: ZCML Language",
+      "properties": {
+        "zcmlLanguage.zprettypath": {
+          "type": "string",
+          "description": "Enter the absolute path of zpretty",
+          "default": "uvx zpretty"
+        },
+        "zcmlLanguage.zprettyoptions": {
+          "type": "string",
+          "description": "Enter the command line options to append to the zpretty call. By default we pass the -z option signaling that this file is a ZCML file",
+          "default": "-z"
+        }
+      }
+    },
+    "snippets": [
+			{
+				"language": "xml",
+				"path": "./dist/snippets/xml.json"
+			},
+			{
+				"language": "python",
+				"path": "./dist/snippets/python.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./dist/snippets/javascript.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./dist/snippets/javascriptreact.json"
+			}
+		]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "esbuild": "^0.25.3",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
