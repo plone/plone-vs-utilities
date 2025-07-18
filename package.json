@@ -77,7 +77,7 @@
         "talLanguage.zprettyoptions": {
           "type": "string",
           "description": "Enter the command line options to append to the zpretty call when using with Page Templates. By default we pass the -x option signaling that this file is a Zope Page Template file",
-          "default": "-z"
+          "default": "-x"
         }
       }
     },
