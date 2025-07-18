@@ -53,6 +53,16 @@ To install it manually in your VS Code editor, check out this repository and sym
 
 You have to reload the editor window or restart vs code, to load the snippets.
 
+## Configure
+
+This add on has several configuration options that can be modified using VS Code settings:
+
+- zcmlLanguage.zprettypath: path to zpretty. By default it tries to run using _uvx_: uvx zpretty.
+
+- zcmlLanguage.zprettyoptions: options to format ZCML code. By default it passes the _-z_ option to run zpretty in ZCML mode.
+
+- talLanguage.zprettyoptions. options to format XML code. By default it passes nothing, to let zpretty guess the file format.
+
 ## Contribute
 
 If you have ideas to improve this extension, let us know! You can add an issue in this repository or even better make a pull request with your improvements.
