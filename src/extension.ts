@@ -59,7 +59,7 @@ const registerFormatter = (
 
       return vscode.languages.registerDocumentFormattingEditProvider(formatter.languages, {
         provideDocumentFormattingEdits(document, options) {
-          const command = formatter.command + " " + formatter.options;
+          const command = formatter.command + " -i " + formatter.options;
           outputChannel.appendLine(command);
           const workspaceFolder = vscode.workspace.getWorkspaceFolder(document.uri);
           const backupFolder = vscode.workspace.workspaceFolders?.[0];
