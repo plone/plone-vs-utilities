@@ -104,7 +104,9 @@ const registerFormatter = (
 
 // this method is called when your extension is deactivated
 export function deactivate() {
-  const outputChannel = vscode.window.createOutputChannel('Plone: ZCML Language');
-  outputChannel.appendLine('Extension disabled');
+  const outputChannel1 = vscode.window.createOutputChannel('Plone: ZCML Language');
+  outputChannel1.appendLine('Extension disabled');
+  const outputChannel2 = vscode.window.createOutputChannel('Plone: TAL Language');
+  outputChannel2.appendLine('Extension disabled');
 
 }
