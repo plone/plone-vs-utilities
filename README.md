@@ -49,7 +49,7 @@ This extension is already in the official Extension Marketplace and can be insta
 
 ### Manual Install
 
-To install it manually in your VS Code editor, check out this repository and symlink it under the name "plone-vs-utilities" into your extensions directory on Linux usually: `~/.vscode/extensions/`.
+To install it manually in your VS Code editor, check out this repository and symlink it under the name "plone" into your extensions directory on Linux usually: `~/.vscode/extensions/`.
 
 You have to reload the editor window or restart vs code, to load the snippets.
 
