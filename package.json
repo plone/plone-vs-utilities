@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.100.0"
   },
-	"icon": "images/plone.png",
+  "icon": "images/plone.png",
   "publisher": "plone",
   "categories": [
     "Programming Languages",
@@ -14,11 +14,11 @@
     "Snippets"
   ],
   "keywords": [
-		"plone",
-		"snippets",
-		"vs code"
-	],
-	"license": "GPL-3.0",
+    "plone",
+    "snippets",
+    "vs code"
+  ],
+  "license": "GPL-3.0",
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -34,6 +34,19 @@
           "ZCML"
         ],
         "configuration": "./dist/language/zcml.json"
+      },
+      {
+        "id": "tal",
+        "extensions": [
+          ".pt"
+        ],
+        "aliases": [
+          "TAL",
+          "ZPT",
+          "Page Templates",
+          "Zope Page Templates"
+        ],
+        "configuration": "./dist/language/tal.json"
       }
     ],
     "grammars": [
@@ -41,10 +54,15 @@
         "language": "zcml",
         "scopeName": "source.zcml",
         "path": "./dist/grammar/zcml.json"
+      },
+      {
+        "language": "tal",
+        "scopeName": "source.tal",
+        "path": "./dist/grammar/tal.json"
       }
     ],
     "configuration": {
-      "title": "Plone: ZCML Language",
+      "title": "Plone: ZCML & TAL Language",
       "properties": {
         "zcmlLanguage.zprettypath": {
           "type": "string",
@@ -53,29 +71,34 @@
         },
         "zcmlLanguage.zprettyoptions": {
           "type": "string",
-          "description": "Enter the command line options to append to the zpretty call. By default we pass the -z option signaling that this file is a ZCML file",
+          "description": "Enter the command line options to append to the zpretty call when using with ZCML files. By default we pass the -z option signaling that this file is a ZCML file",
+          "default": "-z"
+        },
+        "talLanguage.zprettyoptions": {
+          "type": "string",
+          "description": "Enter the command line options to append to the zpretty call when using with Page Templates. By default we pass the -x option signaling that this file is a Zope Page Template file",
           "default": "-z"
         }
       }
     },
     "snippets": [
-			{
-				"language": "xml",
-				"path": "./dist/snippets/xml.json"
-			},
-			{
-				"language": "python",
-				"path": "./dist/snippets/python.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./dist/snippets/javascript.json"
-			},
-			{
-				"language": "javascriptreact",
-				"path": "./dist/snippets/javascriptreact.json"
-			}
-		]
+      {
+        "language": "xml",
+        "path": "./dist/snippets/xml.json"
+      },
+      {
+        "language": "python",
+        "path": "./dist/snippets/python.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/snippets/javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./dist/snippets/javascriptreact.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
