@@ -25,7 +25,7 @@ It also provides Snippets for Volto Block View and Edit components, and Volto bl
 
 ![Volto Snippets for VS Code](https://github.com/plone/plone-vs-snippets/raw/master/images/vs-code-snippets-volto.gif)
 
-## ZCML Language Configuration and Formatter for VSCode
+## ZCML an TAL/ZPT Language Configuration and Formatter for VSCode
 
 ZCML is an XML extension used by Zope applications to configure themselves. Its used extensively in [Plone](https://plone.org).
 
@@ -38,6 +38,10 @@ The code of this addon is based on [VSCode Custom Local Formatters](https://gith
 The extension provides to configuration settings (with sane defaults), to provide the absolute path of your zpretty executable and the options passed to it.
 
 If you have any questions or want to provide some feedback, add a [GitHub Issue](https://github.com/plone/plone-vs-utilities/issues)
+
+[zpretty](https://github.com/collective/zpretty/) also provides an XML formatter, very useful to format Zope Page Templates.
+
+This extensions provides also a language configuration for ZPT files (TAL language), and also a file formatter to get a pretty output.
 
 ## Install
 
