@@ -84,19 +84,19 @@
     "snippets": [
       {
         "language": "xml",
-        "path": "./dist/snippets/xml.json"
+        "path": "./src/snippets/xml.json"
       },
       {
         "language": "python",
-        "path": "./dist/snippets/python.json"
+        "path": "./src/snippets/python.json"
       },
       {
         "language": "javascript",
-        "path": "./dist/snippets/javascript.json"
+        "path": "./src/snippets/javascript.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./dist/snippets/javascriptreact.json"
+        "path": "./src/snippets/javascriptreact.json"
       }
     ]
   },

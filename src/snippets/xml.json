@@ -1,0 +1,531 @@
+{
+    "ASCII Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.ASCII}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6:default}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneAsciiField"
+    },
+    "ASCIILine Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.ASCIILine}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneAsciiLineField"
+    },
+    "Bool Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Bool}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <default>${5}</default>",
+            "  <required>${6|False,True|}</required>",
+            "  <readonly>${7|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneBoolField"
+    },
+    "Bool Field (SingleCheckBox) (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Bool}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <form:widget type=\"plone.app.z3cform.widget.SingleCheckBoxBoolFieldWidget\"></form:widget>",
+            "  <default>${5}</default>",
+            "  <required>${6|False,True|}</required>",
+            "  <readonly>${7|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneBoolSingleCheckBoxField"
+    },
+    "Bytes Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Bytes}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <required>${7|False,True|}</required>",
+            "  <readonly>${8|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneBytesField"
+    },
+    "BytesLine Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.BytesLine}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6:default}</default>",
+            "  <required>${7|False,True|}</required>",
+            "  <readonly>${8|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneBytesLineField"
+    },
+    "Choice Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Choice}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <vocabulary>${5:plone.app.vocabularies.PortalTypes}</vocabulary>",
+            "  <default>${6}</default>",
+            "  <required>${7|False,True|}</required>",
+            "  <readonly>${8|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneChoiceField"
+    },
+    "DataGrid Field (plone.supermodel)": {
+        "body": [
+            "<!-- make sure collective.z3cform.datagridfield is installed! -->",
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.List}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <value_type type=\"${5:collective.z3cform.datagridfield.DictRow}\">",
+            "    <schema>${6:your.package.content.your_ct.ITableRowSchema}</schema>",
+            "  </value_type>",
+            "  <form:widget type=\"collective.z3cform.datagridfield.DataGridFieldFactory\"/>",
+            "</field>"
+        ],
+        "prefix": "PloneDataGridField"
+    },
+    "Date Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Date}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>${7|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneDateField"
+    },
+    "Datetime Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Datetime}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>${7|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneDateTimeField"
+    },
+    "Decimal Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Decimal}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneDecimalField"
+    },
+    "DottedName Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.DottedName}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "  <!--<min_length>6</min_length>-->",
+            "  <!--<max_length>20</max_length>-->",
+            "  <!--<min_dots>1</min_dots>-->",
+            "  <!--<max_dots>3</max_dots>-->",
+            "</field>"
+        ],
+        "prefix": "PloneDottedNameField"
+    },
+    "Field Mode (plone.autoform.directive)": {
+        "body": [
+            "form:mode=\"z3c.form.interfaces.IForm:${1|input,display,hidden|} z3c.form.interfaces.IEditForm:${2|input,display,hidden|}\""
+        ],
+        "prefix": "PloneFieldMode"
+    },
+    "Field Omitted (plone.autoform.directive)": {
+        "body": [
+            "form:omitted=\"z3c.form.interfaces.IForm:${1|true,false|} z3c.form.interfaces.IEditForm:${2|true,false|}\""
+        ],
+        "prefix": "PloneFieldOmmited"
+    },
+    "Field Order (plone.autoform.directive)": {
+        "body": [
+            "form:${1|before,after|}=\"*\""
+        ],
+        "prefix": "PloneFieldOrder"
+    },
+    "Field Permission (plone.autoform.directive)": {
+        "body": [
+            "security:${1|read-permission,write-permission|}=\"${2|zope2.View,cmf.ManagePortal,cmf.ModifyPortalContent,cmf.ListFolderContents,zope2.AccessContentsInformation|}\""
+        ],
+        "prefix": "PloneFieldPermission"
+    },
+    "Field Widget (plone.autoform.directive)": {
+        "body": [
+            "<form:widget type=\"${1|z3c.form.browser.text.TextWidget,z3c.form.browser.checkbox.CheckBoxFieldWidget,z3c.form.browser.checkbox.SingleCheckBoxFieldWidget,z3c.form.browser.radio.RadioFieldWidget,plone.z3cform.textlines.TextLinesFieldWidget,plone.app.z3cform.wysiwyg.WysiwygFieldWidget,plone.app.z3cform.widget.SelectFieldWidget,plone.app.z3cform.widget.AjaxSelectFieldWidget,plone.app.z3cform.widget.RelatedItemsFieldWidget,plone.app.z3cform.widget.QueryStringFieldWidget,plone.app.z3cform.widget.LinkFieldWidget|}\">",
+            "  <klass>${2:my_css_class}</klass>",
+            "</form:widget>"
+        ],
+        "prefix": "PloneFieldWidget"
+    },
+    "File Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:plone.namedfile.field.NamedBlobFile}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneFileField"
+    },
+    "Float Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Float}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "  <min_length></min_length>",
+            "  <max_length></max_length>",
+            "</field>"
+        ],
+        "prefix": "PloneFloatField"
+    },
+    "FrozenSet Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.FrozenSet}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>${6|False,True|}</readonly>",
+            "  <value_type type=\"${7:zope.schema.TextLine}\">",
+            "    <title>${8:Val}</title>",
+            "  </value_type>",
+            "  <default>",
+            "    <element>Dummy</element>",
+            "  </default>",
+            "  <max_length></max_length>",
+            "  <min_length></min_length>",
+            "</field>"
+        ],
+        "prefix": "PloneFrozenSetField"
+    },
+    "Id Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Id}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneIdField"
+    },
+    "Image Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:plone.namedfile.field.NamedBlobImage}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>${6|False,True|}</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneImageField"
+    },
+    "Int Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Int}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "  <min_length></min_length>",
+            "  <max_length></max_length>",
+            "</field>"
+        ],
+        "prefix": "PloneIntField"
+    },
+    "InterfaceField Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.InterfaceField}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>False</readonly>",
+            "  <default>${7:plone.supermodel.tests.IDummy}</default>",
+            "</field>"
+        ],
+        "prefix": "PloneInterfaceField"
+    },
+    "List Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.List}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>${6|False,True|}</readonly>",
+            "  <value_type type=\"${7:zope.schema.TextLine}\">",
+            "    <title>${8:Val}</title>",
+            "  </value_type>",
+            "  <default>",
+            "    <element>${9:1}</element>",
+            "    <element>${10:2}</element>",
+            "  </default>",
+            "</field>"
+        ],
+        "prefix": "PloneListField"
+    },
+    "Multi Choice Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2|zope.schema.Set,zope.schema.List|}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <value_type type=\"${5:zope.schema.Choice}\">",
+            "    <vocabulary>${6:plone.app.vocabularies.PortalTypes}</vocabulary>",
+            "  </value_type>",
+            "  <required>${7|False,True|}</required>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneMultiChoiceField"
+    },
+    "Password Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Password}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "  <min_length></min_length>",
+            "  <max_length></max_length>",
+            "</field>"
+        ],
+        "prefix": "PlonePasswordField"
+    },
+    "QueryString: QueryField (Collections)": {
+        "body": [
+            "<records prefix=\"plone.app.querystring.field.${1:name}\"",
+            "         interface='plone.app.querystring.interfaces.IQueryField'>",
+            "  <value key=\"title\" i18n:translate=\"\">${2:title}</value>",
+            "  <value key=\"description\" i18n:translate=\"\">${3:}</value>",
+            "  <value key=\"enabled\">${4|True,False|}</value>",
+            "  <value key=\"sortable\">${5|True,False|}</value>",
+            "  <value key=\"operations\">",
+            "    <element>plone.app.querystring.operation.int.is</element>",
+            "    <element>plone.app.querystring.operation.int.lessThan</element>",
+            "    <element>plone.app.querystring.operation.int.largerThan</element>",
+            "    <element>plone.app.querystring.operation.date.lessThan</element>",
+            "    <element>plone.app.querystring.operation.date.largerThan</element>",
+            "    <element>plone.app.querystring.operation.date.between</element>",
+            "    <element>plone.app.querystring.operation.date.lessThanRelativeDate</element>",
+            "    <element>plone.app.querystring.operation.date.largerThanRelativeDate</element>",
+            "    <element>plone.app.querystring.operation.date.today</element>",
+            "    <element>plone.app.querystring.operation.date.afterToday</element>",
+            "    <element>plone.app.querystring.operation.date.beforeToday</element>",
+            "    <element>plone.app.querystring.operation.selection.is</element>",
+            "    <element>plone.app.querystring.operation.selection.any</element>",
+            "    <element>plone.app.querystring.operation.selection.all</element>",
+            "    <element>plone.app.querystring.operation.string.contains</element>",
+            "    <element>plone.app.querystring.operation.string.is</element>",
+            "    <element>plone.app.querystring.operation.list.contains</element>",
+            "    <element>plone.app.querystring.operation.boolean.isTrue</element>",
+            "    <element>plone.app.querystring.operation.boolean.isFalse</element>",
+            "    <element>plone.app.querystring.operation.path.isWithin</element>",
+            "    <element>plone.app.querystring.operation.path.isWithinRelative</element>",
+            "    <element>plone.app.querystring.operation.reference.is</element>",
+            "    <element>plone.app.querystring.operation.string.currentUser</element>",
+            "    <element>plone.app.querystring.operation.string.path</element>",
+            "    <element>plone.app.querystring.operation.string.relativePath</element>",
+            "  </value>",
+            "  <value key=\"vocabulary\">${6:plone.app.vocabularies.PortalTypes}</value>",
+            "  <value key=\"group\" i18n:translate=\"\">${7|Text,Dates,Metadata|}</value>",
+            "</records>"
+        ],
+        "prefix": "PloneRegQueryField"
+    },
+    "Relation Choice Field (single) (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1}\" type=\"${2:z3c.relationfield.schema.RelationChoice}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <portal_type>",
+            "    <element>${5|Document,News Item,Event,File,Image,Link,Collection,Folder|}</element>",
+            "    <element>${6|Document,News Item,Event,File,Image,Link,Collection,Folder|}</element>",
+            "  </portal_type>",
+            "  <required>${7|False,True|}</required>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneRelationChoice"
+    },
+    "RelationList Field (multi) (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:z3c.relationfield.schema.RelationList}\">",
+            "  <title i18n:translate=\"\">${3:Related Items}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <value_type type=\"z3c.relationfield.schema.RelationChoice\">",
+            "    <title>${5:Related}</title>",
+            "    <portal_type>",
+            "      <element>${6|Document,News Item,Event,File,Image,Link,Collection,Folder|}</element>",
+            "      <element>${7|Document,News Item,Event,File,Image,Link,Collection,Folder|}</element>",
+            "    </portal_type>",
+            "  </value_type>",
+            "  <required>${8|False,True|}</required>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneRelationList"
+    },
+    "Resource Registry Bundle": {
+        "body": [
+            "<records prefix=\"plone.bundles/${1:bundlename}\"",
+            "         interface='Products.CMFPlone.interfaces.IBundleRegistry'>",
+            "  <value key=\"enabled\">${3|True,False|}</value>",
+            "  <value key=\"depends\">plone</value>",
+            "  <value key=\"jscompilation\">${4:++plone++collective.example/plone-compiled.js}</value>",
+            "  <value key=\"csscompilation\">${5:++plone++collective.example/plone-compiled.css}</value>",
+            "</records>"
+        ],
+        "prefix": "PloneRegBundle"
+    },
+    "RichText Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"plone.app.textfield.RichText\">",
+            "  <title>${2:title}</title>",
+            "  <description>${3:description}</description>",
+            "  <required>${4|False,True|}</required>",
+            "</field>"
+        ],
+        "prefix": "PloneRichTextField"
+    },
+    "Set Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Set}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>${6|False,True|}</readonly>",
+            "  <value_type type=\"${7:zope.schema.TextLine}\">",
+            "    <title>${8:Val}</title>",
+            "  </value_type>",
+            "  <default>",
+            "    <element>${9:1}</element>",
+            "    <element>${10:2}</element>",
+            "  </default>",
+            "  <max_length></max_length>",
+            "  <min_length></min_length>",
+            "</field>"
+        ],
+        "prefix": "PloneSetField"
+    },
+    "SourceText Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.SourceText}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneSourceTextField"
+    },
+    "Text Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Text}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneTextField"
+    },
+    "TextLine Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.TextLine}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneTextLineField"
+    },
+    "Tuple Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.Tuple}\">",
+            "  <title i18n:translate=\"\">${3:title}</title>",
+            "  <description i18n:translate=\"\">${4:description}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <readonly>False</readonly>",
+            "  <value_type type=\"${8:zope.schema.TextLine}\">",
+            "    <title>${9:Val}</title>",
+            "  </value_type>",
+            "  <default>",
+            "    <element>${6:element1}</element>",
+            "    <element>${7:element2}</element>",
+            "  </default>",
+            "  <min_length></min_length>",
+            "  <max_length></max_length>",
+            "</field>"
+        ],
+        "prefix": "PloneTupleField"
+    },
+    "URI Field (plone.supermodel)": {
+        "body": [
+            "<field name=\"${1:name}\" type=\"${2:zope.schema.URI}\">",
+            "  <title i18n:translate=\"\">${3}</title>",
+            "  <description i18n:translate=\"\">${4}</description>",
+            "  <required>${5|False,True|}</required>",
+            "  <default>${6}</default>",
+            "  <readonly>False</readonly>",
+            "</field>"
+        ],
+        "prefix": "PloneUriField"
+    },
+    "Catalog Metadata Column (catalog.xml)": {
+        "body": [
+            "<column value=\"${1}\" />"
+        ],
+        "prefix": "PloneCatalogColumn"
+    },
+    "Catalog Index (catalog.xml)": {
+        "body": [
+            "<index name=\"${1}\" meta_type=\"${2|FieldIndex,KeywordIndex,DateIndex|}\">",
+            "  <indexed_attr value=\"${1}\" />",
+            "</index>"
+        ],
+        "prefix": "PloneCatalogIndex"
+    },
+    "Permission": {
+        "body": [
+            "permission=\"${1|cmf.ManagePortal,cmf.AddPortalContent,cmf.ReviewPortalContent,cmf.ModifyPortalContent,zope2.DeleteObjects,zope2.CopyOrMove,zope2.View,zope.Public|}\""
+        ],
+        "prefix": "PlonePermission"
+    }
+}
