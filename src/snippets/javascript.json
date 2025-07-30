@@ -98,5 +98,93 @@
       "export default messages;"
     ],
     "description": "Volto intl messages"
+  },
+  "Volto intl message id ": {
+    "prefix": ["VoltoIntlMessageId"],
+    "body": [
+      "${1:name}: {",
+      "  id: '${1:name}',",
+      "  defaultMessage: '${1:name}'",
+      "}"
+    ]
+  },
+  "Volto block string field (jsonschema)": {
+    "prefix": ["VoltoBlockStringField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "}"
+    ]
+  },
+  "Volto block url field (jsonschema)": {
+    "prefix": ["VoltoBlockURLField"],
+    "body": [
+      "// if you name this field 'url' or 'href', the link will be automatically",
+      "// converted by the REST API to/from a resolveUID based URL when saving/rendering",
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'url',",
+      "},"
+    ]
+  },
+  "Volto block image field (jsonschema)": {
+    "prefix": ["VoltoBlockImageField"],
+    "body": [
+      "// if you name this field 'preview_image' its URL will be automatically",
+      "// converted by the REST API to/from a resolveUID based URL when saving/rendering",
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'object_browser'",
+      "  mode: 'image',",
+      "},"
+    ]
+  },
+  "Volto block textarea field (jsonschema)": {
+    "prefix": ["VoltoBlockTextareaField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'textarea',",
+      "},"
+    ]
+  },
+  "Volto block choice field (jsonschema)": {
+    "prefix": ["VoltoBlockChoiceField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  choices: [",
+      "    // Saved value  Shown value",
+      "    ['choice-1', 'choice-1'],",
+      "    ['choice-2', 'choice-2'],",
+      "    ['choice-3', 'choice-3'],",
+      "  ],",
+      "  default: 'choice-1',",
+      "},"
+    ]
+  },
+  "Volto block choice field from vocabulary(jsonschema)": {
+    "prefix": ["VoltoBlockChoiceFieldFromVocabulary"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'select',",
+      "  vocabulary: {",
+      "    '@id': '${2|plone.app.vocabularies.Users,plone.app.vocabularies.Groups,plone.app.vocabularies.ImagesScales,plone.app.vocabularies.MetadataFields,plone.app.vocabularies.Weekdays,plone.app.vocabularies.WeekdaysAbbr,plone.app.vocabularies.WeekdaysShort,plone.app.vocabularies.Month,plone.app.vocabularies.MonthAbbr,plone.app.vocabularies.PortalTypes|}',",
+      "  },",
+      "},"
+    ]
+  },
+  "Volto block multiselect field from vocabulary(jsonschema)": {
+    "prefix": ["VoltoBlockMultiSelectFieldFromVocabulary"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'array',",
+      "  vocabulary: {",
+      "    '@id': '${2|plone.app.vocabularies.Users,plone.app.vocabularies.Groups,plone.app.vocabularies.ImagesScales,plone.app.vocabularies.MetadataFields,plone.app.vocabularies.Weekdays,plone.app.vocabularies.WeekdaysAbbr,plone.app.vocabularies.WeekdaysShort,plone.app.vocabularies.Month,plone.app.vocabularies.MonthAbbr,plone.app.vocabularies.PortalTypes|}',",
+      "  },",
+      "},"
+    ]
   }
 }
