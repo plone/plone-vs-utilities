@@ -116,6 +116,33 @@
       "}"
     ]
   },
+  "Volto block integer field (jsonschema)": {
+    "prefix": ["VoltoBlockIntegerField", "VoltoBlockNumberField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  type: 'integer',",
+      "},"
+    ]
+  },
+  "Volto block float field (jsonschema)": {
+    "prefix": ["VoltoBlockFloatField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  type: 'number',",
+      "},"
+    ]
+  },
+  "Volto block boolean field (jsonschema)": {
+    "prefix": ["VoltoBlockBolleanField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  type: 'boolean',",
+      "},"
+    ]
+  },
   "Volto block url field (jsonschema)": {
     "prefix": ["VoltoBlockURLField"],
     "body": [
