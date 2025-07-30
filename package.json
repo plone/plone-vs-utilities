@@ -33,7 +33,7 @@
         "aliases": [
           "ZCML"
         ],
-        "configuration": "./dist/language/zcml.json"
+        "configuration": "./src/language/zcml.json"
       },
       {
         "id": "tal",
@@ -46,19 +46,19 @@
           "Page Templates",
           "Zope Page Templates"
         ],
-        "configuration": "./dist/language/tal.json"
+        "configuration": "./src/language/tal.json"
       }
     ],
     "grammars": [
       {
         "language": "zcml",
         "scopeName": "source.zcml",
-        "path": "./dist/grammar/zcml.json"
+        "path": "./src/grammar/zcml.json"
       },
       {
         "language": "tal",
         "scopeName": "source.tal",
-        "path": "./dist/grammar/tal.json"
+        "path": "./src/grammar/tal.json"
       }
     ],
     "configuration": {
