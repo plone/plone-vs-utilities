@@ -7,7 +7,12 @@
     "vscode": "^1.100.0"
   },
   "icon": "images/plone.png",
-  "publisher": "plone",
+  "publisher": "Plone",
+  "homepage": "https://docs.plone.org/",
+  "sponsor": {
+    "url": "https://github.com/sponsors/plone"
+  },
+  "pricing": "Free",
   "categories": [
     "Programming Languages",
     "Formatters",
@@ -21,7 +26,11 @@
     "snippets",
     "vs_code"
   ],
-  "license": "GPL-3.0",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plone/plone-vs-utilities.git"
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
