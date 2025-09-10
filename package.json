@@ -1,8 +1,8 @@
 {
   "name": "plone-vs-utilities",
-  "displayName": "plone-vs-utilities",
-  "description": "VSCode extension for Plone",
-  "version": "0.0.1",
+  "displayName": "Plone support for VSCode",
+  "description": "Development utilities for Plone in VSCode: ZCML and TAL language support, snippets for XML, Python, JavaScript and React.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -15,8 +15,11 @@
   ],
   "keywords": [
     "plone",
+    "zope",
+    "zcml",
+    "volto",
     "snippets",
-    "vs code"
+    "vs_code"
   ],
   "license": "GPL-3.0",
   "activationEvents": [
