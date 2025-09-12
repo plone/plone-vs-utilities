@@ -2,7 +2,7 @@
   "name": "plone-vs-utilities",
   "displayName": "Plone support for VSCode",
   "description": "Development utilities for Plone in VSCode: ZCML and TAL language support, snippets for XML, Python, JavaScript and React.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -65,12 +65,12 @@
       {
         "language": "zcml",
         "scopeName": "source.zcml",
-        "path": "./src/grammar/zcml.json"
+        "path": "./dist/grammar/zcml.json"
       },
       {
         "language": "tal",
         "scopeName": "source.tal",
-        "path": "./src/grammar/tal.json"
+        "path": "./dist/grammar/tal.json"
       }
     ],
     "configuration": {
@@ -96,24 +96,26 @@
     "snippets": [
       {
         "language": "xml",
-        "path": "./src/snippets/xml.json"
+        "path": "./dist/snippets/xml.json"
       },
       {
         "language": "python",
-        "path": "./src/snippets/python.json"
+        "path": "./dist/snippets/python.json"
       },
       {
         "language": "javascript",
-        "path": "./src/snippets/javascript.json"
+        "path": "./dist/snippets/javascript.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./src/snippets/javascriptreact.json"
+        "path": "./dist/snippets/javascriptreact.json"
       }
     ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
+    "vscode:package": "vsce package",
+    "vscode:publish": "vsce publish",
     "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
     "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
