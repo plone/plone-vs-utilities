@@ -2,9 +2,9 @@
   "name": "plone-vs-utilities",
   "displayName": "Plone support for VSCode",
   "description": "Development utilities for Plone in VSCode: ZCML and TAL language support, snippets for XML, Python, JavaScript and React.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.99.0"
   },
   "icon": "images/plone.png",
   "publisher": "Plone",
@@ -129,7 +129,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.100.0",
+    "@types/vscode": "^1.99.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
