@@ -2,7 +2,7 @@
   "name": "plone-vs-utilities",
   "displayName": "Plone support for VSCode",
   "description": "Development utilities for Plone in VSCode: ZCML and TAL language support, snippets for XML, Python, JavaScript and React.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.99.0"
   },
