@@ -2,7 +2,7 @@
   "name": "plone-vs-utilities",
   "displayName": "Plone support for VSCode",
   "description": "Development utilities for Plone in VSCode: ZCML and TAL language support, snippets for XML, Python, JavaScript and React.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -45,7 +45,7 @@
         "aliases": [
           "ZCML"
         ],
-        "configuration": "./src/language/zcml.json"
+        "configuration": "./dist/language/zcml.json"
       },
       {
         "id": "tal",
@@ -58,7 +58,7 @@
           "Page Templates",
           "Zope Page Templates"
         ],
-        "configuration": "./src/language/tal.json"
+        "configuration": "./dist/language/tal.json"
       }
     ],
     "grammars": [

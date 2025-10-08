@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.1.1
+
+- Fix `Toggle block comment` and `Toggle inline comment` configuration
+
 ## 1.1
 
 - Make `Toggle block comment` and `Toggle inline comment` work for ZCML and TAL files
