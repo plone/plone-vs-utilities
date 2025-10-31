@@ -25,7 +25,7 @@
       "      },",
       "      preview_image: {",
       "        title: intl.formatMessage(messages.preview_image),",
-      "        widget: 'object_browser'",
+      "        widget: 'object_browser',",
       "        mode: 'image'",
       "      },",
       "    },",
