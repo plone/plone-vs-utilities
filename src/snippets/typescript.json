@@ -1,0 +1,216 @@
+{
+  "Volto Block Schema": {
+    "prefix": ["blockSchema", "voltoBlockSchema"],
+    "body": [
+      "import messages from './messages';",
+      "",
+      "const Schema = ({ intl }) => {",
+      "  return {",
+      "    title: intl.formatMessage(messages.blocktitle),",
+      "    fieldsets: [",
+      "      {",
+      "        id: 'default',",
+      "        title: intl.formatMessage(messages.default),",
+      "        fields: ['url', 'title', 'preview_image'],",
+      "      },",
+      "    ],",
+      "",
+      "    properties: {",
+      "      url: {",
+      "        title: intl.formatMessage(messages.URL),",
+      "        widget: 'url',",
+      "      },",
+      "      title: {",
+      "        title: intl.formatMessage(messages.title),",
+      "      },",
+      "      preview_image: {",
+      "        title: intl.formatMessage(messages.preview_image),",
+      "        widget: 'object_browser',",
+      "        mode: 'image'",
+      "      },",
+      "    },",
+      "    required: [],",
+      "  };",
+      "};",
+      "export default Schema;"
+    ],
+    "description": "Volto Block Base Schema"
+  },
+  "Volto Block Config": {
+    "prefix": ["voltoBlockConfig"],
+    "body": [
+      "config.blocks.blocksConfig.block06 = {",
+      "  id: 'block06',",
+      "  title: 'Block 06',",
+      "  view: BlockView,",
+      "  //edit: BlockEdit,",
+      "  blockSchema: BlockSchema,",
+      "  icon: imagesSVG,",
+      "  sidebarTab: 1,",
+      "  group: 'common',",
+      "  variations: [",
+      "    {",
+      "      id: 'variation01',",
+      "      title: 'Variation 01',",
+      "      isDefault: true,",
+      "      template: VariationView0601,",
+      "    },",
+      "    {",
+      "      id: 'variation02',",
+      "      title: 'Variation 02',",
+      "      isDefault: false,",
+      "      template: VariationView0602,",
+      "      schemaEnhancer: schemaEnhancerBlock06Variation02,",
+      "    },",
+      "  ],",
+      "};"
+    ],
+    "description": "Volto block configuration boilerplate"
+  },
+  "Volto Schema Enhancer function": {
+    "prefix": ["voltoSchemaEnhancer"],
+    "body": [
+      "const schemaEnhancerFunction = ({ formData, schema, intl}) => {",
+      "  schema.properties.color = {",
+      "    title: 'Color',",
+      "  };",
+      "  schema.fieldsets[0].fields.push('color');",
+      "  return schema;",
+      "};",
+      "",
+      "export default schemaEnhancerFunction;"
+    ],
+    "description": "Volto schema enhancer function"
+  },
+  "Volto intl messages": {
+    "prefix": ["voltoIntlMessages"],
+    "body": [
+      "import { defineMessages } from 'react-intl';",
+      "",
+      "const messages = defineMessages({",
+      "  title: {",
+      "    id: 'title',",
+      "    defaultMessage: 'Title',",
+      "  },",
+      "});",
+      "",
+      "export default messages;"
+    ],
+    "description": "Volto intl messages"
+  },
+  "Volto intl message id ": {
+    "prefix": ["VoltoIntlMessageId"],
+    "body": [
+      "${1:name}: {",
+      "  id: '${1:name}',",
+      "  defaultMessage: '${1:name}'",
+      "}"
+    ]
+  },
+  "Volto block string field (jsonschema)": {
+    "prefix": ["VoltoBlockStringField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "}"
+    ]
+  },
+  "Volto block integer field (jsonschema)": {
+    "prefix": ["VoltoBlockIntegerField", "VoltoBlockNumberField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  type: 'integer',",
+      "},"
+    ]
+  },
+  "Volto block float field (jsonschema)": {
+    "prefix": ["VoltoBlockFloatField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  type: 'number',",
+      "},"
+    ]
+  },
+  "Volto block boolean field (jsonschema)": {
+    "prefix": ["VoltoBlockBolleanField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  type: 'boolean',",
+      "},"
+    ]
+  },
+  "Volto block url field (jsonschema)": {
+    "prefix": ["VoltoBlockURLField"],
+    "body": [
+      "// if you name this field 'url' or 'href', the link will be automatically",
+      "// converted by the REST API to/from a resolveUID based URL when saving/rendering",
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'url',",
+      "},"
+    ]
+  },
+  "Volto block image field (jsonschema)": {
+    "prefix": ["VoltoBlockImageField"],
+    "body": [
+      "// if you name this field 'preview_image' its URL will be automatically",
+      "// converted by the REST API to/from a resolveUID based URL when saving/rendering",
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'object_browser'",
+      "  mode: 'image',",
+      "},"
+    ]
+  },
+  "Volto block textarea field (jsonschema)": {
+    "prefix": ["VoltoBlockTextareaField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'textarea',",
+      "},"
+    ]
+  },
+  "Volto block choice field (jsonschema)": {
+    "prefix": ["VoltoBlockChoiceField"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  choices: [",
+      "    // Saved value  Shown value",
+      "    ['choice-1', 'choice-1'],",
+      "    ['choice-2', 'choice-2'],",
+      "    ['choice-3', 'choice-3'],",
+      "  ],",
+      "  default: 'choice-1',",
+      "},"
+    ]
+  },
+  "Volto block choice field from vocabulary(jsonschema)": {
+    "prefix": ["VoltoBlockChoiceFieldFromVocabulary"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'select',",
+      "  vocabulary: {",
+      "    '@id': '${2|plone.app.vocabularies.Users,plone.app.vocabularies.Groups,plone.app.vocabularies.ImagesScales,plone.app.vocabularies.MetadataFields,plone.app.vocabularies.Weekdays,plone.app.vocabularies.WeekdaysAbbr,plone.app.vocabularies.WeekdaysShort,plone.app.vocabularies.Month,plone.app.vocabularies.MonthAbbr,plone.app.vocabularies.PortalTypes|}',",
+      "  },",
+      "},"
+    ]
+  },
+  "Volto block multiselect field from vocabulary(jsonschema)": {
+    "prefix": ["VoltoBlockMultiSelectFieldFromVocabulary"],
+    "body": [
+      "${1:name}: {",
+      "  title: intl.formatMessage(messages.${1:name}),",
+      "  widget: 'array',",
+      "  vocabulary: {",
+      "    '@id': '${2|plone.app.vocabularies.Users,plone.app.vocabularies.Groups,plone.app.vocabularies.ImagesScales,plone.app.vocabularies.MetadataFields,plone.app.vocabularies.Weekdays,plone.app.vocabularies.WeekdaysAbbr,plone.app.vocabularies.WeekdaysShort,plone.app.vocabularies.Month,plone.app.vocabularies.MonthAbbr,plone.app.vocabularies.PortalTypes|}',",
+      "  },",
+      "},"
+    ]
+  }
+}
