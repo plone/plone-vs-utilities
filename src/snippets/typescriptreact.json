@@ -4,9 +4,9 @@
     "body": [
       "import React from 'react';",
       "import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';",
-      "import { BlockViewProps } from '@plone/types';",
+      "import type { BlockViewProps } from '@plone/types';",
       "",
-      "const BlockView: React.FC<BlockViewProps> = (props) => {",
+      "const BlockView = (props: BlockViewProps) => {",
       "  const { data, className, style } = props;",
       "  return (",
       "    <div className={className} style={style}>",
@@ -15,7 +15,8 @@
       "  );",
       "};",
       "",
-      "export default withBlockExtensions(BlockView);"
+      "export default withBlockExtensions(BlockView);",
+      ""
     ],
     "description": "Volto Block Base View"
   },
@@ -24,9 +25,9 @@
     "body": [
       "import React from 'react';",
       "import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';",
-      "import { BlockViewProps } from '@plone/types';",
+      "import type { BlockViewProps } from '@plone/types';",
       "",
-      "const BlockView: React.FC<BlockViewProps> = (props) => {",
+      "const BlockView = (props: BlockViewProps) => {",
       "  const { data, className, style, variation, editable = false } = props;",
       "  // get the selected variation template, and use it to render the block",
       "  const BodyTemplate = variation.template;",
@@ -37,7 +38,8 @@
       "  );",
       "};",
       "",
-      "export default withBlockExtensions(BlockView);"
+      "export default withBlockExtensions(BlockView);",
+      ""
     ],
     "description": "Volto Block Base View with Variations"
   },
@@ -51,11 +53,9 @@
       "",
       "import { BlockView } from './BlockView';",
       "import Schema from './schema';",
-      "import { BlockEditProps } from '@plone/types';",
+      "import type { BlockEditProps } from '@plone/types';",
       "",
-      "",
-      "",
-      "const BlockEdit: React.FC<BlockEditProps> = (props) => {",
+      "const BlockEdit = (props: BlockEditProps) => {",
       "  const { block, data, onChangeBlock, selected } = props;",
       "  return (",
       "    <>",
@@ -65,7 +65,7 @@
       "        <BlockDataForm",
       "          schema={Schema(props)}",
       "          title={Schema(props).title}",
-      "          onChangeField={(id, value) => {",
+      "          onChangeField={(id: string, value: unknown) => {",
       "            onChangeBlock(block, {",
       "              ...data,",
       "              [id]: value,",
@@ -79,7 +79,8 @@
       "  );",
       "};",
       "",
-      "export default withBlockExtensions(BlockEdit);"
+      "export default withBlockExtensions(BlockEdit);",
+      ""
     ],
     "description": "Volto Block Base Edit"
   }
