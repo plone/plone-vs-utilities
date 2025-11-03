@@ -3,8 +3,12 @@
     "prefix": ["blockSchema", "voltoBlockSchema"],
     "body": [
       "import messages from './messages';",
+      "import type { JSONSchema } from '@plone/types';",
+      "import type { IntlShape } from '@plone/types/src/i18n';",
       "",
-      "const Schema = ({ intl }) => {",
+      "const Schema = (props: { intl: IntlShape }): JSONSchema => {",
+      "  const { intl } = props;",
+      "",
       "  return {",
       "    title: intl.formatMessage(messages.blocktitle),",
       "    fieldsets: [",
@@ -26,21 +30,22 @@
       "      preview_image: {",
       "        title: intl.formatMessage(messages.preview_image),",
       "        widget: 'object_browser',",
-      "        mode: 'image'",
+      "        mode: 'image',",
       "      },",
       "    },",
       "    required: [],",
       "  };",
       "};",
-      "export default Schema;"
+      "export default Schema;",
+      ""
     ],
     "description": "Volto Block Base Schema"
   },
   "Volto Block Config": {
     "prefix": ["voltoBlockConfig"],
     "body": [
-      "config.blocks.blocksConfig.block06 = {",
-      "  id: 'block06',",
+      "config.blocks.blocksConfig.${1:block06} = {",
+      "  id: '${1:block06}',",
       "  title: 'Block 06',",
       "  view: BlockView,",
       "  //edit: BlockEdit,",
@@ -70,15 +75,29 @@
   "Volto Schema Enhancer function": {
     "prefix": ["voltoSchemaEnhancer"],
     "body": [
-      "const schemaEnhancerFunction = ({ formData, schema, intl}) => {",
-      "  schema.properties.color = {",
+      "import type { BlockConfigBase, Content, JSONSchema } from '@plone/types';",
+      "import type { IntlShape } from '@plone/types/src/i18n';",
+      "",
+      "const schemaEnhancerFunction = ({",
+      "  formData,",
+      "  schema,",
+      "  intl,",
+      "}: {",
+      "  schema: JSONSchema;",
+      "  formData: BlockConfigBase; // Not sure, if so, has to be extendable",
+      "  intl: IntlShape;",
+      "  navRoot: Content;",
+      "  contentType: string;",
+      "}) => {",
+      "  schema.properties['color'] = {",
       "    title: 'Color',",
       "  };",
       "  schema.fieldsets[0].fields.push('color');",
       "  return schema;",
       "};",
       "",
-      "export default schemaEnhancerFunction;"
+      "export default schemaEnhancerFunction;",
+      ""
     ],
     "description": "Volto schema enhancer function"
   },
@@ -94,7 +113,8 @@
       "  },",
       "});",
       "",
-      "export default messages;"
+      "export default messages;",
+      ""
     ],
     "description": "Volto intl messages"
   },
