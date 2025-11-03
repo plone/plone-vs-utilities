@@ -3,8 +3,11 @@
     "prefix": ["blockSchema", "voltoBlockSchema"],
     "body": [
       "import messages from './messages';",
+      "import type { JSONSchema } from '@plone/types';",
       "",
-      "const Schema = ({ intl }) => {",
+      "const Schema: JSONSchema = (props: BlockSchemaProps) => {",
+      "  const { intl } = props;",
+      "",
       "  return {",
       "    title: intl.formatMessage(messages.blocktitle),",
       "    fieldsets: [",
