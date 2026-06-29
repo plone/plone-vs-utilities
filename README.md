@@ -61,7 +61,7 @@ This add-on has several configuration options that can be modified using VS Code
 
 - zcmlLanguage.zprettyoptions: options to format ZCML code. By default it passes the _-z_ option to run `zpretty` in ZCML mode.
 
-- talLanguage.zprettyoptions. options to format XML code. By default it passes nothing, to let `zpretty` guess the file format.
+- talLanguage.zprettyoptions: options to pass to `zpretty` for TAL files. Default is `-x` to treat them as XML.
 
 ## Contribute
 
