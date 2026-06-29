@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.2
+
+- Fix zpretty default to be -x for TAL files.
+
 ## 1.1.1
 
 - Fix `Toggle block comment` and `Toggle inline comment` configuration
